@@ -1,17 +1,17 @@
 const {isFuture} = require("date-fns");
-// const path = require('path')
+const path = require('path')
 
-// exports.onCreateWebpackConfig = ({actions}) => {
-// 	actions.setWebpackConfig({
-// 		resolve: {
-// 			modules: [
-// 				path.resolve(__dirname, 'node_modules'),
-// 				path.resolve(__dirname, 'src'),
-// 				'node_modules'
-// 			],
-// 		},
-// 	})
-// }
+exports.onCreateWebpackConfig = ({actions}) => {
+	actions.setWebpackConfig({
+		resolve: {
+			modules: [
+				path.resolve(__dirname, 'node_modules'),
+				path.resolve(__dirname, 'src'),
+				'node_modules'
+			],
+		},
+	})
+}
 
 exports.createSchemaCustomization = ({actions, schema}) => {
 	actions.createTypes([

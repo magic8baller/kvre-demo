@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-
 const AppContext = React.createContext()
 
 const AppProvider = ({children}) => {
@@ -10,12 +9,11 @@ const AppProvider = ({children}) => {
 	const hideMobileNav = () => {
 		setIsMobileNavOpen(false)
 	}
-	const isOpen = isMobileNavOpen
+	
 	return (
 		<AppContext.Provider value={{
 			showMobileNav,
 			isMobileNavOpen,
-			isOpen,
 			hideMobileNav,
 			setIsMobileNavOpen
 		}}>

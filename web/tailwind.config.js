@@ -12,9 +12,9 @@ module.exports = {
 			},
 		},
 		extend: {
-			screens: {
-				'dark': {'raw': '(prefers-color-scheme: dark)'},
-			},
+			// screens: {
+			// 	'dark': {'raw': '(prefers-color-scheme: dark)'},
+			// },
 			colors: {
 				'gray-50': '#f9fafb',
 				'gray-150': '#f4f5f7',
@@ -62,6 +62,5 @@ module.exports = {
 			tailwindui
 		],
 	},
-	purge: false
 
 }
