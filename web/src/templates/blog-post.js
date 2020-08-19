@@ -2,9 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
-import BlogPost from "../components/blog-post";
+import BlogPost from "../components/blog/blog-post";
 import SEO from "../components/seo";
-import Layout from "../containers/layout";
+import Layout from "../components/containers/layout";
 import { toPlainText } from "../lib/helpers";
 
 export const query = graphql`

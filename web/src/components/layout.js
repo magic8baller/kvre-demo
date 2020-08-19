@@ -1,60 +1,50 @@
-import React from "react";
-import Header from "./header";
-import Footer from "./footer";
+import React, {useState} from "react";
+import tw, {css, styled} from 'twin.macro';
+import Header from "./Navbar";
+import MobileNav from '../camp/MobileNav';
+import {GlobalStyles} from '../styles/global.css';
 import "../styles/layout.css";
+import Footer from "./Footer/index.js";
 
-class Layout extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      scrolled: false,
-    };
-  }
+const Wrapper = styled.div`
+ ${tw`h-screen bg-cool-gray-400`};
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.toggleBodyClass);
-    this.toggleBodyClass();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.toggleBodyClass);
-  }
-
-  toggleBodyClass = () => {
-    if (this.state.scrolled && window.scrollY <= 10) {
-      this.setState({ scrolled: false });
-    } else if (!this.state.scrolled && window.scrollY > 10) {
-      this.setState({ scrolled: true });
-    }
-  };
-
-  render() {
-    const {
-      children,
-      onHideNav,
-      onShowNav,
-      showNav,
-      siteTitle,
-      navMenuItems,
-      textWhite = true,
-    } = this.props;
-    const { scrolled } = this.state;
-    return (
-      <>
-        <Header
-          navMenuItems={navMenuItems}
-          siteTitle={siteTitle}
-          onHideNav={onHideNav}
-          onShowNav={onShowNav}
-          showNav={showNav}
-          scrolled={scrolled}
-          textWhite={textWhite}
-        />
-        <>{children}</>
-        <Footer siteTitle={siteTitle} />
-      </>
-    );
-  }
+header, footer {
+	flex: 0 1 auto;
 }
+ `
+const LayoutFC = ({children,
+	siteTitle,
+	navMenuItems, textWhite = true}) => {
+	const [showNav, setShowNav] = useState(true);
+	const handleShowNav = () => setShowNav(true);
+	const handleHideNav = () => setShowNav(false);
 
-export default Layout;
+
+	return (
+			<>
+				<GlobalStyles />
+				<Wrapper css={css`body {
+					${tw`bg-cool-gray-400`}
+			}`}>
+				<Header
+
+					navMenuItems={navMenuItems}
+					siteTitle={siteTitle}
+					onHideNav={handleHideNav}
+					onShowNav={handleShowNav}
+					showNav={showNav}
+					textWhite={textWhite}
+				/>
+				<MobileNav />
+				<main tw='w-full flex-grow mt-24 bg-cool-gray-400'>
+					{children}
+					</main>
+				<Footer siteTitle={siteTitle} />
+		</Wrapper>
+			</>
+		);
+	}
+
+
+export default LayoutFC;

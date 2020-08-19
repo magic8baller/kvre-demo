@@ -8,6 +8,7 @@
     "build": "gatsby build",
     "clean-cache": "gatsby clean",
     "dev": "npm run clean-cache && gatsby develop",
+    "start": "npm run dev",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.15",
+    "@tailwindcss/custom-forms": "^0.2.1",
     "date-fns": "^1.30.1",
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
@@ -25,7 +27,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
-    "gatsby": "^2.9.2",
+    "gatsby": "^2.24.23",
     "gatsby-plugin-postcss": "^2.1.19",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-source-sanity": "^4.0.3",
@@ -35,17 +37,40 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.6.0"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@sanity/client": "^0.147.3",
+    "@tailwindcss/ui": "^0.5.0",
+    "framer-motion": "^2.3.0",
+    "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.0.41",
+    "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-google-analytics": "^2.1.34",
-    "gatsby-plugin-sharp": "^2.4.4",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-robots-txt": "^1.5.1",
+    "gatsby-plugin-sharp": "^2.6.24",
+    "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-source-filesystem": "^2.1.47",
-    "gatsby-transformer-sharp": "^2.3.13",
+    "gatsby-transformer-sharp": "^2.5.12",
     "katex": "^0.11.1",
+    "popper.js": "1.15.0",
+    "react-headroom": "^3.0.0",
     "react-instagram-embed": "^1.5.0",
-    "react-player": "^1.15.2"
+    "react-player": "^1.15.2",
+    "twin.macro": "^1.7.0",
+    "typeface-lato": "0.0.75",
+    "typeface-oswald": "^1.1.4",
+    "typeface-roboto": "0.0.75",
+    "typeface-yeseva-one": "0.0.72"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./tailwind.config.js",
+      "preset": "emotion",
+      "hasSuggestions": true
+    }
   }
 }

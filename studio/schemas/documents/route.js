@@ -30,11 +30,12 @@ export default {
       validation: (Rule) => Rule.required(),
       description: 'The page you want to appear at this path. Remember it needs to be published.',
       to: [
-        {
-          type: 'page',
-        },
+        {type: 'page'},
+					{type: 'about'},
+					{type: 'person'},
       ],
-    },
+		},
+
     {
       name: 'slug',
       type: 'slug',

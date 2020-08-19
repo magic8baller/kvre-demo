@@ -1,8 +1,10 @@
 import React from 'react'
-
+import 'twin.macro'
 const strokeStyle = {vectorEffect: 'non-scaling-stroke'}
 
 const HamburgerIcon = () => (
+	<div tw="-mr-2 flex items-center md:hidden">
+	<button>
   <svg
     viewBox='0 0 25 25'
     fill='none'
@@ -15,6 +17,8 @@ const HamburgerIcon = () => (
     <path d='M5 12.5H20' stroke='currentColor' style={strokeStyle} />
     <path d='M5 17.5H20' stroke='currentColor' style={strokeStyle} />
   </svg>
+	</button>
+	</div>
 )
 
 export default HamburgerIcon

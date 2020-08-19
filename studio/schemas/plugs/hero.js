@@ -14,7 +14,8 @@ export default {
     },
     {
       name: 'tagline',
-      type: 'simpleBlockContent'
+			type: 'simpleBlockContent',
+			title: 'Tagline'
     },
     {
       name: 'illustration',

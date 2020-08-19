@@ -76,7 +76,7 @@ export default {
       },
       of: [
         { type: 'authorReference' },
-        { type: 'math', icon: mathInlineIcon, title: 'Inline math' }
+        // { type: 'math', icon: mathInlineIcon, title: 'Inline math' }
       ]
     },
     // You can add additional types here. Note that you can't use
@@ -88,6 +88,6 @@ export default {
     },
     { type: 'instagram' },
     { type: 'videoEmbed' },
-    { type: 'math', icon: mathIcon, title: 'Math block' }
+    // { type: 'math', icon: mathIcon, title: 'Math block' }
   ]
 }

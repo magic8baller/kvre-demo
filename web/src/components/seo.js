@@ -5,8 +5,6 @@ import { StaticQuery, graphql } from "gatsby";
 import { imageUrlFor } from "../lib/image-url";
 import { buildImageObj } from "../lib/helpers";
 
-// https://ogp.me
-
 function SEO({ description, lang, meta, keywords, title, image, bodyAttr, gradient }) {
   return (
     <StaticQuery
@@ -89,6 +87,7 @@ function SEO({ description, lang, meta, keywords, title, image, bodyAttr, gradie
               }
             `}</style>
             )}
+							<script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js'/>
           </Helmet>
         );
       }}

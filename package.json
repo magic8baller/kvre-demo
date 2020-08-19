@@ -4,7 +4,8 @@
   "version": "1.0.2",
   "scripts": {
     "build": "lerna run build --parallel",
-    "dev": "lerna run dev --parallel",
+		"dev": "lerna run dev --parallel",
+		"start": "npm run dev",
     "format": "lerna run format",
     "build-studio": "lerna bootstrap && (cd studio && npm run build)",
     "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
@@ -15,6 +16,6 @@
   },
   "devDependencies": {
     "@sanity/cli": "^1.148.0",
-    "lerna": "^3.13.1"
+    "lerna": "^3.22.1"
   }
 }

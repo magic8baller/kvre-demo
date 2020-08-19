@@ -41,12 +41,6 @@ export const query = graphql`
     }
 
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      primaryColor {
-        hex
-      }
-      secondaryColor {
-        hex
-      }
       title
       openGraph {
         title
