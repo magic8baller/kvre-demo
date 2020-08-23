@@ -1,20 +1,16 @@
-const tailwindui = require(`@tailwindcss/ui`)
-const tailwindforms = require(`@tailwindcss/custom-forms`)
+// const tailwindui = require(`@tailwindcss/ui`)
 module.exports = {
 	theme: {
-		container: {
-			center: true,
-			padding: {
-				default: '1rem',
-				sm: '2rem',
-				lg: '3rem',
-				xl: '4rem',
-			},
-		},
+		// container: {
+		// 	center: true,
+		// 	padding: {
+		// 		default: '1rem',
+		// 		sm: '2rem',
+		// 		lg: '3rem',
+		// 		xl: '4rem',
+		// 	},
+		// },
 		extend: {
-			// screens: {
-			// 	'dark': {'raw': '(prefers-color-scheme: dark)'},
-			// },
 			colors: {
 				'gray-50': '#f9fafb',
 				'gray-150': '#f4f5f7',
@@ -25,7 +21,7 @@ module.exports = {
 				'gray-650': '#4b5563',
 				'gray-750': '#374151',
 				'gray-850': '#252f3f',
-				'gray-850': '#161e2e',
+				'gray-950': '#161e2e',
 				'cool-gray-50': '#f8fafc',
 				'cool-gray-100': '#f1f5f9',
 				'cool-gray-200': '#e2e8f0',
@@ -59,14 +55,9 @@ module.exports = {
 		},
 		variants: {},
 		plugins: [
-			tailwindui
 		],
 	},
 	future: {
     removeDeprecatedGapUtilities: true,
-  },
-	purge: [
-    "./src/**/*.{js,jsx}"
-  ],
-
+  }
 }

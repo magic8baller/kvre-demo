@@ -2,7 +2,7 @@ import {Link} from "gatsby";
 import React, {useContext} from "react";
 import tw, {styled} from 'twin.macro';
 import FullNav from './FullNav'
-import {AppContext} from '../../context/index.js';
+import {AppContext} from 'context/index.js';
 import BrandLogo from '../../images/kv-logo.png';
 import {Menu} from '../MobileNav/Nav.styles';
 const Brand = styled.img`
@@ -14,8 +14,8 @@ ${tw`fixed w-full z-30 top-0 text-indigo-100 bg-white shadow`}
 `
 const NavHeader = ({showNav, onHideNav, onShowNav, siteTitle, navMenuItems = [], textWhite = true}) => {
 
-	const {isMobileNavOpen,
-		setIsMobileNavOpen} = useContext(AppContext)
+	const state = useContext(AppContext)
+	const {isMobileNavOpen, setIsMobileNavOpen} = state
 
 	let navActionClass =
 		"mx-auto lg:mx-0 hover:underline font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75";

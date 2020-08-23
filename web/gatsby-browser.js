@@ -1,26 +1,22 @@
-require('tailwindcss/dist/base.css');
-require('tailwindcss/dist/components.css');
-require('tailwindcss/dist/utilities.css');
-require('typeface-lato');
-require('typeface-roboto');
-require('typeface-yeseva-one');
-require('typeface-oswald');
-// require'@tailwindcss/ui';
-// require'@tailwindcss/custom-forms';
+import 'tailwindcss/dist/base.css';
+import 'tailwindcss/dist/components.css';
+import 'tailwindcss/dist/utilities.css';
+import 'typeface-lato';
+import 'typeface-roboto';
+import 'typeface-yeseva-one';
+import 'typeface-oswald';
+import { wrapRootElement as wrap } from "./rootWrapper"
 
-const React = require("react")
-const {AppProvider} = require('./src/context')
-exports.wrapRootElement = ({element}) => {
-	return <AppProvider>{element}</AppProvider>
-}
+export const wrapRootElement = wrap
 
-exports.onInitialClientRender = () => {
+
+export const onInitialClientRender = () => {
     if ('onGatsbyInitialClientRender' in window && typeof window.onGatsbyInitialClientRender === 'function') {
         window.onGatsbyInitialClientRender();
     }
 };
 
-exports.onRouteUpdate = () => {
+export const onRouteUpdate = () => {
     if ('onGatsbyRouteUpdate' in window && typeof window.onGatsbyRouteUpdate === 'function') {
         window.onGatsbyRouteUpdate();
     }
