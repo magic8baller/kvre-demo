@@ -41,11 +41,11 @@ module.exports = {
         overlayDrafts: !isProd
       }
 		},
-	"gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-robots-txt",
-			options: {}
-		},
+	// "gatsby-plugin-sitemap",
+    // {
+    //   resolve: "gatsby-plugin-robots-txt",
+		// 	options: {}
+		// },
 		{
 			resolve: `gatsby-plugin-react-svg`, options: {
 				rule: {
