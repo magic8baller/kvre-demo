@@ -65,8 +65,6 @@ module.exports = {
 	future: {
     removeDeprecatedGapUtilities: true,
   },
-	purge: [
-    "./src/**/*.{js,jsx}"
-  ],
+	purge: false
 
 }
